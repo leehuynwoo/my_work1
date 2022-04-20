@@ -397,6 +397,7 @@ nav {
 }
 
 .hamburger__box {
+    transform: translateY(25%);
     display: none;
 }
 
@@ -1280,8 +1281,12 @@ select[name="filter"] {
     }
 
     .hamburger__box{
+        
         display: block;
         text-align: right;
+    }
+
+    .hamburger img {
     }
 
 
