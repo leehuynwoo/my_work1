@@ -137,16 +137,3 @@ function scrollEvent() {
   })
 };
 
-//호버하면 자식요소에 addClass하기 
-$(document).ready(function () {
-$('.slider3 .swiper-slide').hover(
-  function () {
-    $('.hover_wrap').addClass('.activ');
-  },
-  function () {
-    $('..hover_wrap').removeClass('.activ');
-  });
-});
-});
-
-// /.hover_wrap.active .slider3 .swiper-slide
