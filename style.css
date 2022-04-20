@@ -7,7 +7,7 @@
     box-sizing: border-box;
 }
 
-.wrapping{
+.wrapping {
     overflow: hidden;
 }
 
@@ -396,7 +396,7 @@ nav {
     height: 30px;
 }
 
-.hamburger {
+.hamburger__box {
     display: none;
 }
 
@@ -666,22 +666,25 @@ input.search_line {
     margin-top: 20px;
 }
 
-.hover_wrap{
+.hover_wrap.active {
+    display: block;
+}
+
+.hover_wrap {
+    display: none;
     position: absolute;
     left: 0;
     top: 0;
-width: 370px;
-height: 370px;
-background: linear-gradient(180deg, rgba(196, 196, 196, 0) 0%, rgba(0, 155, 222, 0.4) 100%);
+    width: 370px;
+    height: 370px;
+    background: linear-gradient(180deg, rgba(196, 196, 196, 0) 0%, rgba(0, 155, 222, 0.4) 100%);
 }
 
 .hover_box {
     position: relative;
 }
 
-.hover_inner {
-    
-}
+.hover_inner {}
 
 .capsule {
     position: absolute;
@@ -712,22 +715,20 @@ background: linear-gradient(180deg, rgba(196, 196, 196, 0) 0%, rgba(0, 155, 222,
 /* 미니배너 */
 
 .mini_banner__wrap {
-    position: relative;
-    display: flex;
-    justify-content: center;
     max-width: 1827px;
-    margin-bottom: 110px;
+    margin: 0 auto;
 }
 
 .mini__banner__container {
-    min-width: 1827px;
-    height: 300px;
+    position: relative;
+    min-height: 300px;
     background-color: var(--color-purepink);
     border-radius: 50px;
     text-align: center;
     flex-direction: column;
     background: url(img/Group\ 7.svg);
-    margin: 0 auto;
+    margin-bottom: 110px;
+    background-size: cover;
 }
 
 .mini__banner__container {
@@ -762,7 +763,8 @@ background: linear-gradient(180deg, rgba(196, 196, 196, 0) 0%, rgba(0, 155, 222,
     margin: 0 auto;
 }
 
-.mini__banner__btn {
+/* 플로팅 click 버튼 */
+.mini__banner__btn__wrap {
     position: absolute;
     top: 140px;
     right: 200px;
@@ -902,7 +904,7 @@ background: linear-gradient(180deg, rgba(196, 196, 196, 0) 0%, rgba(0, 155, 222,
     grid-row: span 2;
 }
 
-.instagram__posting img:last-child{
+.instagram__posting img:last-child {
     display: none;
 }
 
@@ -924,26 +926,27 @@ background: linear-gradient(180deg, rgba(196, 196, 196, 0) 0%, rgba(0, 155, 222,
     z-index: -1;
     -webkit-text-stroke: 1px var(--color-white);
     color: transparent;
-  }
-  
-  .loop-holder__text {
-      display: block;
-      animation: textLoop 12s linear infinite;
-      font-size: 42px;
-      padding-right: .35em;
-  }
-  
-  
-  @keyframes textLoop {
-      0% {
-          -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0)
-      }
-      100% {
-          -webkit-transform: translate3d(-100%, 0, 0);
-          transform: translate3d(-100%, 0, 0)
-      }
-  }
+}
+
+.loop-holder__text {
+    display: block;
+    animation: textLoop 12s linear infinite;
+    font-size: 42px;
+    padding-right: .35em;
+}
+
+
+@keyframes textLoop {
+    0% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0)
+    }
+
+    100% {
+        -webkit-transform: translate3d(-100%, 0, 0);
+        transform: translate3d(-100%, 0, 0)
+    }
+}
 
 /* -------------
 ------푸터------ 
@@ -1021,7 +1024,6 @@ background: linear-gradient(180deg, rgba(196, 196, 196, 0) 0%, rgba(0, 155, 222,
 ✨✨✨✨✨✨상품디테일화면✨✨✨✨✨✨
 ✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨ */
 
-
 .product_inner {
     display: grid;
     grid-template-columns: 570px 570px;
@@ -1084,6 +1086,7 @@ background: linear-gradient(180deg, rgba(196, 196, 196, 0) 0%, rgba(0, 155, 222,
 }
 
 .deep_info {
+    margin-top: 30px;
     font-weight: 300;
     font-size: 18px;
     letter-spacing: -0.05em;
@@ -1255,57 +1258,71 @@ select[name="filter"] {
 
 
 /* -반응형 🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡*/
+@media all and (max-width:1240px) {
+    nav {
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+
+    .nav__inner {
+        width: 100%;
+        grid-template-columns: 1fr 1fr;
+        justify-content: flex-start;
+    }
+
+    .logo {
+        text-align: left;
+    }
+
+    .gnb,
+    .nav__util {
+        display: none;
+    }
+
+    .hamburger__box{
+        display: block;
+        text-align: right;
+    }
+
+
 
 /* PC , 테블릿 가로 (해상도 768px ~ 1023px)*/
 @media all and (min-width:768px) and (max-width:1024px) {
-    .nav {
-        padding: 0 !important;
-    }
-
-    .nav__inner ul {
-        margin: 0;
-    }
-
-    .nav__inner ul li {
-        margin-right: 20px;
-    }
-
-    .nav__inner ul li:first-child {
-        margin-left: 20px;
-    }
 
     /* 메인 배너 */
-.banner__title{
-    font-size: 32px !important;
-}
+    .banner__title {
+        font-size: 32px !important;
+    }
 
-.banner__main .swiper-wrapper{
-object-fit:contain;
-}
+    .banner__main .swiper-wrapper {
+        object-fit: contain;
+    }
 
-/* 베스트 상품 */
-#best_products .products {
-    grid-template-columns: repeat(3, 1fr);
-}
+    /* 베스트 상품 */
+    #best_products .products {
+        grid-template-columns: repeat(3, 1fr);
+    }
 
-/* 추천 */
-.reco__coment {
-    margin-left: 40px;
-}
+    /* 추천 */
+    .reco__coment {
+        margin-left: 40px;
+    }
 
-button.hashtag {
-padding: 20px 40px;
-}
+    button.hashtag {
+        padding: 20px 40px;
+    }
 
-.reco__coment .section__title {
-    margin-bottom: 37px;
-}
+    .reco__coment .section__title {
+        margin-bottom: 37px;
+    }
+
     /* 신상 */
 
     .new_arrival__container {
         padding: 0 40px;
     }
-    .slider3 .swiper-slide img{
+
+    .slider3 .swiper-slide img {
         width: 300px !important;
         height: 300px !important;
     }
@@ -1316,7 +1333,7 @@ padding: 20px 40px;
         top: auto !important;
         bottom: 0;
     }
-    
+
     .slider3.swiper-button-next {
         right: 205px;
         top: auto !important;
@@ -1327,28 +1344,59 @@ padding: 20px 40px;
         padding-top: 230px;
     }
 
+    /* 미니배너 */
+    .mini_tit {
+        margin-top: 30px;
+    }
+
+    .mini__banner__container {
+        margin-right: 40px;
+        margin-left: 40px;
+        max-height: 420px;
+        background-position-x: 30%;
+    }
+
+    /* 미니배너 클릭버튼 */
+    .mini__banner__btn__wrap {
+        margin-top: 14px;
+        position: initial;
+    }
+
+    .mini__btn {
+        margin-bottom: 50px;
+    }
+
+    .mini__btn__here {
+        position: absolute;
+        left: 40%;
+        transform: translateX(-25%);
+        font-size: 16px;
+        bottom: 0 !important;
+    }
+
+
 
     /* 핫딜 */
-.hot_deal__products {
-    flex-direction: column;
-}
+    .hot_deal__products {
+        flex-direction: column;
+    }
 
-.hot_deal__product__info {
-    margin-top: 20px;
-    width: 702px;
-    margin-left: 0;
-}
+    .hot_deal__product__info {
+        margin-top: 20px;
+        width: 702px;
+        margin-left: 0;
+    }
 
-.hover_wrap {
-    width: 300px;
-    height: 300px;
-}
+    .hover_wrap {
+        width: 300px;
+        height: 300px;
+    }
 
-.hot_deal__proudct_intro {
-    margin-bottom: 20px;
-}
+    .hot_deal__proudct_intro {
+        margin-bottom: 20px;
+    }
 
-/* 인스타그램 */
+    /* 인스타그램 */
     .instagram__posting {
         grid-template-columns: repeat(3, 17.8125rem);
         grid-template-rows: repeat(2, 17.8125rem);
@@ -1364,35 +1412,38 @@ padding: 20px 40px;
         grid-row: auto;
     }
 
-    .instagram__posting img:last-child{
+    .instagram__posting img:last-child {
         display: block;
     }
-    
+
     #footer {
         padding-top: 40px;
         padding-bottom: 100px;
     }
-.footer__container{
-    margin: 0 40px;
-}
 
-/* 페이지업 버튼 */
-.page_up_btn{
-    right: 15px;
-    bottom: 15px;
-    z-index: 5;
-}
-.page_up_btn img{
-    height: 50px; width: 50px;
-}
+    .footer__container {
+        margin: 0 40px;
+    }
+
+    /* 페이지업 버튼 */
+    .page_up_btn {
+        right: 15px;
+        bottom: 15px;
+        z-index: 5;
+    }
+
+    .page_up_btn img {
+        height: 50px;
+        width: 50px;
+    }
 
 
-/* 모바일 가로, 테블릿 세로 (해상도 480px ~ 767px)*/
-@media all and (min-width:480px) and (max-width:767px) {
-    ...
-}
+    /* 모바일 가로, 테블릿 세로 (해상도 480px ~ 767px)*/
+    @media all and (min-width:480px) and (max-width:767px) {
+        ...
+    }
 
-/* 모바일 가로, 테블릿 세로 (해상도 ~ 479px)*/
-@media all and (max-width:479px) {
-    ...
-}
+    /* 모바일 가로, 테블릿 세로 (해상도 ~ 479px)*/
+    @media all and (max-width:479px) {
+        ...
+    }

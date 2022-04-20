@@ -137,40 +137,16 @@ function scrollEvent() {
   })
 };
 
-// 신상 마우스 호버효과
-// $(document).ready(function () {
-//   $('.swiper-slide').hover(function () {
-//     $(this).children('.hover_wrap').addClass('onHover');
-//   });
+//호버하면 자식요소에 addClass하기 
+$(document).ready(function () {
+$('.slider3 .swiper-slide').hover(
+  function () {
+    $('.hover_wrap').addClass('.activ');
+  },
+  function () {
+    $('..hover_wrap').removeClass('.activ');
+  });
+});
+});
 
-// });
-
-// $(document).ready(function() {
-//   $('.swiper-slide').on('hover',
-//   function() {
-//       $(this > '.hover_wrap').toggleClass('onHover');
-//   });
-// });
-
-// $(document).ready(function()
-//   {
-//     $('.swiper-slide').hover(
-//       function(){ 
-//         $(this).children(".hover_wrap").addClass("onHover"); //Add an active class to the anchor
-//       },
-//       function() {
-//         $(this).children(".hover_wrap").removeClass("onHover"); //Remove an active class to the anchor
-//       }
-//    )
-//  });
-
-// // 호버박스의 크기는 이미지의 크기와 같다
-// $(document).ready(function () {
-
-//   var imgH=('.product_img').innerHeight();
-//   console.log(imgH);
-// };
-
-const img=document.querySelector('.product_img');
-const imgH=img.clientHeight();
-console.log(imgH);
+// /.hover_wrap.active .slider3 .swiper-slide
