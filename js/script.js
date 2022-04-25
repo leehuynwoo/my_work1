@@ -16,7 +16,7 @@ $(function () {
 
   // reco_slider 
   var swiper2 = new Swiper(".reco_slider", {
-    slidesPerView: 4,
+    slidesPerView: "auto",
     centeredSlides: true,
     spaceBetween: 30,
     grabCursor: true,
@@ -47,13 +47,40 @@ $(function () {
 
 })
 
-// 신상품 
-$(function() {
+$(document).ready(function () {
+  function checkWidth() {
+    let instaWrap=$('.instagram__posting');
+    let instaImg = $('.instagram__wrap img');
+    let windowSize = $(window).width();
+    if (windowSize <= 970) {
+      instaWrap.css('grid-template-columns', 'repeat(3, 14.8125rem)')
+      .css('grid-template-rows','repeat(2, 14.8125rem)');
+      instaImg.css('width', '240px')
+        .css('height', '240px');
 
-  $('#new_arrival .swiper-slide').on('mouseover', function() {
+      console.log(instaImg);
+    }
+    if (windowSize <= 905) {
+
+    }
+    if (windowSize <= 419) {
+
+    }
+  }
+  checkWidth();
+  $(window).resize(checkWidth);
+
+});
+
+
+
+// 신상품 
+$(function () {
+
+  $('#new_arrival .swiper-slide').on('mouseover', function () {
     $(this).children('.hover_wrap').addClass('active')
   })
-  $('#new_arrival .swiper-slide').on('mouseleave', function() {
+  $('#new_arrival .swiper-slide').on('mouseleave', function () {
     $(this).children('.hover_wrap').removeClass('active')
   })
 
@@ -110,27 +137,6 @@ addCartTextBtn.addEventListener('click', function (e) {
   alert('장바구니 담기 성공!');
 });
 
-// 수량컨트롤러
-const add = document.querySelector('.increment');
-const remove = document.querySelector('.decrement');
-const int = document.querySelector('.count');
-let integer = 1;
-
-add.addEventListener('click', function () {
-  integer += 1;
-  int.innerHTML = integer;
-});
-
-remove.addEventListener('click', function () {
-  if (integer == 1) {
-    remove.setAttribute("disable", "disable")
-  } else {
-    integer -= 1;
-    int.innerHTML = integer;
-  }
-});
-
-
 // 스크롤 이벤트
 const scrollMenu = document.querySelector('.deep_info_wrap')
 const scrollMenuFloatting = document.querySelector('.detail_floatingn_wrap')
@@ -151,18 +157,16 @@ function scrollEvent() {
 };
 
 // 할인율
-$(function() {
+$(function () {
 
   let discount = $('.discount').text()
   let origin_price = $('.origin_price').text()
 
-  if( discount == '') {
+  if (discount == '') {
     $('.discount').remove()
   }
-  if( origin_price == '') {
+  if (origin_price == '') {
     $('.discount').remove()
   }
 
 })
-
-
