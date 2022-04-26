@@ -449,25 +449,13 @@ input.search_line {
 /* ---------------------------
 햄버거메뉴--------------------
 ----------------------------- */
-#side_menu {
-    z-index: 9999;
-    width: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
-    display: none;
-}
-
-.side_menu_wrap {
-    position: relative;
-}
-
 .side_menu_bg {
-    position: absolute;
-    z-index: -999;
+    position: fixed;
+    z-index: 9998;
     width: 100%;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.2);
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: none;
 }
 
 .side_menu_bg img {
@@ -477,14 +465,23 @@ input.search_line {
 }
 
 .side_menu_contents {
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: -100%;
     width: 77.77%;
-    height: 100vh;
+    height: 100%;
     padding: 30px 20px;
     background-color: var(--color-skyblue);
     border: 1px solid var(--color-blue);
+    transition: all 0.4s;
 }
 
-#side_menu .need_log {
+.side_menu_contents.active {
+    left: 0;
+}
+
+.side_menu_contents  .need_log {
     cursor: pointer;
     color: #161616;
     font-size: 20px;
@@ -492,11 +489,12 @@ input.search_line {
     margin-bottom: 14px;
 }
 
-#side_menu .side_search_box {
+.side_menu_contents .side_search_box {
     position: relative;
 }
 
-#side_menu input {
+.side_menu_contents input {
+    width: 100%;
     padding: 13px 13px;
     height: 30px;
     border-radius: 10px;
@@ -506,16 +504,16 @@ input.search_line {
     background-color: var(--color-yellow);
 }
 
-#side_menu input:focus {
+.side_menu_contents input:focus {
     outline: none;
 }
 
-#side_menu input::placeholder {
+.side_menu_contents  input::placeholder {
     font-size: 14px;
     color: var(--color-blue);
 }
 
-#side_menu img {
+.side_menu_contents img {
     position: absolute;
 }
 
@@ -528,13 +526,14 @@ input.search_line {
     color: var(--color-red);
 }
 
-.side_menu_lists:first-child {
+.side_menu_lists {
     position: relative;
 }
 
-.side_menu_lists:first-child::after {
+.side_menu_lists::after {
     position: absolute;
     content: '';
+    top: -14px;
     width: 100%;
     height: 1px;
     background-color: var(--color-blue);
@@ -1577,13 +1576,13 @@ select[name="filter"] {
 
         /* 인스타그램 */
         .instagram__posting {
-            grid-template-columns: repeat(3, 17.8125rem);
-            grid-template-rows: repeat(2, 17.8125rem);
+            grid-template-columns: repeat(3, 240px);
+            grid-template-rows: unset;
         }
 
         .instagram__posting img {
-            width: 295px;
-            height: 295px;
+            width: 240px;
+            height: 240px;
         }
 
         .instagram__posting img:nth-child(1) {
@@ -1671,11 +1670,362 @@ select[name="filter"] {
 
 
         /* 모바일 가로, 테블릿 세로 (해상도 480px ~ 767px)*/
-        @media all and (min-width:480px) and (max-width:767px) {
-            ...
+        @media all and (max-width:767px) {
+
+            /* 타이틀 */
+            .section__title {
+                font-size: 32px;
+            }
+
+            /* 버튼 */
+            .basic {
+                font-size: 16px;
+            }
+
+            .add_cart {
+                font-size: 16px;
+            }
+
+            /* 배너 */
+            .banner__inner .swiper-button-next,
+            .banner__inner .swiper-button-prev {
+                display: none;
+            }
+
+            /* 베스트 상품 */
+            #best_products .products {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            /* 레코 */
+            #reco .swiper-initialized {
+                left: -22%;
+            }
+
+            #reco .section__title {
+                font-size: 30px;
+            }
+
+            .circle {
+                width: 120px;
+                height: 120px;
+            }
+
+            /* 미니배너 */
+            .mini_tit {
+                font-size: 28px;
+            }
+
+            .mini_date {
+                font-size: 16px;
+            }
+
+            .mini_info {
+                font-size: 18px;
+            }
+
+            .mini__btn {
+                font-size: 18px;
+                margin-bottom: 30px;
+            }
+
+            .mini__btn__here {
+                display: none;
+            }
+
+
+
+            /* new_arrival */
+            #new_arrival {
+                margin-top: 40px;
+            }
+
+            .swiper-pagination-bullet,
+            .swiper-pagination-bullet.swiper-pagination-bullet-active {
+                height: 12px !important;
+                width: 12px !important;
+            }
+
+            .slider3.swiper-button-prev.b120,
+            .slider3.swiper-button-next.b120 {
+                bottom: -22px;
+                width: 80px;
+                height: 80px;
+            }
+
+            .slider3.swiper-button-prev img,
+            .slider3.swiper-button-next img {
+                width: 52px;
+                height: auto;
+            }
+
+            .slider3.swiper-button-next {
+                right: 90px;
+            }
+
+            .slider3.swiper-button-prev {
+                left: 90px;
+            }
+
+
+            .new_arrival__container {
+                padding: 0;
+            }
+
+            /* 핫딜 */
+            #hot_deal {
+                margin-top: 140px;
+                padding-top: 100px;
+                padding-bottom: 60px;
+            }
+
+            .hot_deal__products {
+                margin-right: 0;
+            }
+
+            .hot_deal__product__img {
+                display: flex;
+                justify-content: center;
+                width: 100%;
+            }
+
+            .hot_deal__product__img img {
+                width: 90%;
+                height: initial;
+
+            }
+
+            .timer {
+                margin: 15px 40px 0px 40px;
+                font-size: 24px;
+            }
+
+            .timer p {
+                font-size: 24px;
+                line-height: 63px;
+            }
+
+            .last_ment {
+                margin-top: 15px;
+                font-size: 24px;
+            }
+
+            .hot_deal__product__info {
+                margin-right: 0;
+                width: 90%;
+            }
+
+            .hot_deal__product__info .brand_name {
+                font-size: 18px;
+            }
+
+            .hot_deal__product__info .hot_deal__proudct_intro {
+                font-size: 22px;
+            }
+
+            .hotdeal.discount,
+            .hotdeal.price {
+                font-size: 22px;
+            }
+
+            .origin_price {
+                font-size: 22px;
+            }
+
+            /* 인스타그램 */
+            .instagram__posting {
+                grid-template-columns: repeat(2, 220px);
+            }
+
+            .instagram__posting img {
+                width: 220px;
+                height: 220px;
+            }
+
+            /* 롤링텍스트 */
+            .loop-holder__text {
+                font-size: 32px;
+            }
+
+            /* 푸터 */
+            .footer__menus li {
+                font-size: 18px;
+            }
+
+            .footer__business__info p {
+                font-size: 14px;
+            }
+
+            .cs_number {
+                font-size: 20px;
+            }
+
+            .operating_time {
+                font-size: 14px;
+            }
+
+            .cs__info .basic {
+                font-size: 14px;
+            }
+
+
         }
 
         /* 모바일 가로, 테블릿 세로 (해상도 ~ 479px)*/
         @media all and (max-width:479px) {
-            ...
+
+            /* 버튼 */
+            .basic {
+                width: 210px;
+            }
+
+            .add_cart {
+                width: 210px;
+            }
+
+            .banner__inner .swiper-slide {
+                height: 100vh;
+            }
+
+            .banner__main .banner__title {
+                left: 11rem;
+                font-size: 22px !important;
+            }
+
+            /* 베스트 상품 */
+            .section__title {
+                font-size: 22px;
+                margin-bottom: 30px;
+            }
+
+            #best_products .products {
+                grid-template-columns: repeat(2, 44%);
+                align-items: flex-start;
+            }
+
+            .product_img {
+                max-width: 100%;
+                height: unset !important;
+            }
+
+            .price_box .discount,
+            .price_box p {
+                font-size: 18px;
+            }
+
+
+            .tags .tag {
+                font-size: 10px;
+            }
+
+            /* 레코 */
+            #reco .section__title {
+                font-size: 24px;
+                margin-bottom: 20px;
+            }
+
+            .reco__coment .reco__whatif {
+                font-size: 24px;
+            }
+
+            /* 신상 */
+
+            .slider3.swiper-button-prev.b120,
+            .slider3.swiper-button-next.b120 {
+                width: 50px;
+                height: 50px;
+                bottom: -10px;
+            }
+
+            .slider3.swiper-pagination {}
+
+            .slider3.swiper-button-prev.b120 {
+                left: 20%;
+            }
+
+            .slider3.swiper-button-next.b120 {
+                right: 20%;
+            }
+
+            /* 미니배너 */
+            .mini__banner__container {
+                bottom: 10px;
+            }
+
+            .mini_tit {
+                font-size: 20px;
+            }
+
+            .mini_date {
+                font-size: 12px;
+            }
+
+            .mini_info {
+                font-size: 14px;
+            }
+
+            .mini__btn {
+                padding: 12px 34px;
+            }
+
+            /* 핫딜 */
+
+            #hot_deal {
+                margin-top: 80px;
+            }
+
+            .last_ment {
+                font-size: 22px;
+                margin-bottom: 35px;
+            }
+
+            .hot_deal__proudct_intro {
+                font-size: 20px !important;
+            }
+
+            .hot_deal_price .origin_price,
+            .hotdeal.discount,
+            .hotdeal.price {
+                font-size: 18px;
+            }
+
+            /* 인스타그램 */
+            .instagram__wrap {
+                justify-content: center !important;
+            }
+
+            .instagram__posting {
+                grid-template-columns: repeat(2, 45%);
+                justify-content: center;
+            }
+
+            .instagram__posting img {
+                width: 100%;
+                height: 100%;
+            }
+
+
+            /* 푸터 */
+            #footer {
+                z-index: -2;
+                width: 100%;
+                margin: 60px auto 0;
+            }
+
+            #footer img {
+                width: 240px;
+                text-align: center;
+            }
+
+            .footer__container {
+                margin: 0 20px;
+            }
+
+            .footer__menus {
+                margin: 15px 0;
+            }
+
+            .footer__menus li {
+                font-size: 14px;
+            }
         }
