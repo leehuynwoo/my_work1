@@ -44,32 +44,22 @@ $(function () {
       prevEl: ".swiper-button-prev",
     },
   });
-
 })
 
-$(document).ready(function () {
-  function checkWidth() {
-    let instaWrap=$('.instagram__posting');
-    let instaImg = $('.instagram__wrap img');
-    let windowSize = $(window).width();
-    if (windowSize <= 970) {
-      instaWrap.css('grid-template-columns', 'repeat(3, 14.8125rem)')
-      .css('grid-template-rows','repeat(2, 14.8125rem)');
-      instaImg.css('width', '240px')
-        .css('height', '240px');
-
-      console.log(instaImg);
+$(function () {
+  // 햄버거를 눌리면 사이드 메뉴가 활성화
+  $('.hamburger').on('click', function () {
+    $('.side_menu_contents ').addClass('active');
+    $('.side_menu_bg').fadeIn();
+    if ('.side_menu_contents') {
+      
     }
-    if (windowSize <= 905) {
-
-    }
-    if (windowSize <= 419) {
-
-    }
-  }
-  checkWidth();
-  $(window).resize(checkWidth);
-
+  });
+  //배경을 눌리면 사이드 메뉴 비활성화 
+  $('.side_menu_bg').on('click', function () {
+    $('.side_menu_contents').removeClass('active');
+    $('.side_menu_bg').fadeOut();
+  })
 });
 
 
@@ -83,8 +73,6 @@ $(function () {
   $('#new_arrival .swiper-slide').on('mouseleave', function () {
     $(this).children('.hover_wrap').removeClass('active')
   })
-
-
 })
 
 
@@ -137,24 +125,24 @@ addCartTextBtn.addEventListener('click', function (e) {
   alert('장바구니 담기 성공!');
 });
 
-// 스크롤 이벤트
-const scrollMenu = document.querySelector('.deep_info_wrap')
-const scrollMenuFloatting = document.querySelector('.detail_floatingn_wrap')
-scrollMenu.addEventListener('click', scrollEvent);
-scrollMenuFloatting.addEventListener('click', scrollEvent);
+// // 스크롤 이벤트
+// const scrollMenu = document.querySelector('.deep_info_wrap')
+// const scrollMenuFloatting = document.querySelector('.detail_floatingn_wrap')
+// scrollMenu.addEventListener('click', scrollEvent);
+// scrollMenuFloatting.addEventListener('click', scrollEvent);
 
-function scrollEvent() {
-  const target = event.target;
-  const link = target.dataset.link;
-  if (link == null) {
-    return;
-  };
-  const scrollTo = document.querySelector(link);
-  scrollTo.scrollIntoView({
-    behavior: "smooth",
-    block: "center"
-  })
-};
+// function scrollEvent() {
+//   const target = event.target;
+//   const link = target.dataset.link;
+//   if (link == null) {
+//     return;
+//   };
+//   const scrollTo = document.querySelector(link);
+//   scrollTo.scrollIntoView({
+//     behavior: "smooth",
+//     block: "center"
+//   })
+// };
 
 // 할인율
 $(function () {
