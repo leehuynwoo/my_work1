@@ -2,7 +2,7 @@
 $(function () {
   var swiper1 = new Swiper(".banner__main", {
     slidesPerView: 1,
-    spaceBetween: 30,
+    spaceBetween: 0,
     loop: true,
     pagination: {
       el: ".swiper-pagination",
@@ -27,33 +27,43 @@ $(function () {
     navigation: false,
   });
 
-
   //slider 3
-  var swiper3 = new Swiper(".slider3", {
-    slidesPerView: 3,
-    spaceBetween: 30,
-    slidesPerGroup: 3,
-    loop: true,
-    loopFillGroupWithBlank: true,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-  });
-})
-
-
-//이미지 사이즈 높이는 항상 넓이와 같다 : not-working state
-$(function () {
-  if ($('.swiper-slide').height() != $('.swiper-slide').width()) {
-    $('.swiper-slide').height() == $('.swiper-slide').width();
-    $('.hover_wrap').height() == $('.hover_wrap').width();
+  let windowSize = $(window).width();
+  if (windowSize <= 480) {
+    var swiper3 = new Swiper(".slider3", {
+      slidesPerView: 2,
+      spaceBetween: 14,
+      slidesPerGroup: 3,
+      loop: true,
+      loopFillGroupWithBlank: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  } else {
+    var swiper3 = new Swiper(".slider3", {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      slidesPerGroup: 3,
+      loop: true,
+      loopFillGroupWithBlank: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
   }
-})
+});
+
 
 $(function () {
   // 햄버거를 눌리면 사이드 메뉴가 활성화
@@ -61,7 +71,7 @@ $(function () {
     $('.side_menu_contents ').addClass('active');
     $('.side_menu_bg').fadeIn();
     if ('.side_menu_contents') {
-      
+
     }
   });
   //배경을 눌리면 사이드 메뉴 비활성화 
