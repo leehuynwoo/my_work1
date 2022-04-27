@@ -695,8 +695,8 @@ ul.side_menu_lists:not(:first-child)::after {
 
 .reco_slider_product {
     position: absolute;
-    top: 20px;
-    right: 20px;
+    bottom: 20px;
+    left: 20px;
     font-size: 24px;
     font-weight: 600;
     color: #EEF8FF;
@@ -755,7 +755,6 @@ ul.side_menu_lists:not(:first-child)::after {
 
 #new_arrival .product_img {
     width: 370px;
-    height: 370px;
     position: relative;
 }
 
@@ -800,7 +799,7 @@ ul.side_menu_lists:not(:first-child)::after {
     left: 0;
     top: 0;
     width: 370px;
-    height: 370px;
+    height: 100%;
     background: linear-gradient(180deg, rgba(196, 196, 196, 0) 0%, rgba(0, 155, 222, 0.4) 100%);
 }
 
@@ -1381,7 +1380,7 @@ select[name="filter"] {
 }
 
 
-/* -반응형 🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡*/
+/* -모바일 🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡*/
 @media all and (max-width:1400px) {
     .banner__main .banner__title {
         left: 13.1875rem;
@@ -1502,11 +1501,6 @@ select[name="filter"] {
             left: -10%;
         }
 
-        .slider3 .swiper-slide {
-            width: 430px !important;
-            height: auto !important;
-        }
-
         .reco__coment .section__title {
             margin-bottom: 37px;
         }
@@ -1524,25 +1518,22 @@ select[name="filter"] {
 
 
         /* 신상 */
-        #new_arrival .new__arriaval__swiper__wrap {
-            max-width: 984px;
+        #new_arrival .new__arriaval__swiper__wrap,
+        .new_arrival__container {
+            width: 100%;
         }
 
-        #new_arrival .product_img,
-        .hover_wrap,
-        #new_arrival .swiper-slide {
-            width: 250px !important;
-            height: 250px !important;
-
+        .swiper-slide {
+            height: auto;
         }
 
         .new_arrival__container {
             padding: 0 40px;
         }
 
-        .slider3 .swiper-slide img {
-            width: 300px !important;
-            height: 300px !important;
+        .slider3 .swiper-slide img,
+        .slider3 .swiper-slide {
+            width: unset !important;
         }
 
 
@@ -1575,8 +1566,8 @@ select[name="filter"] {
         }
 
         .hover_wrap {
-            width: 300px;
-            height: 300px;
+            width: 100%;
+            height: 100%;
         }
 
         .hot_deal__proudct_intro {

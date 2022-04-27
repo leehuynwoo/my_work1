@@ -46,6 +46,15 @@ $(function () {
   });
 })
 
+
+//이미지 사이즈 높이는 항상 넓이와 같다 : not-working state
+$(function () {
+  if ($('.swiper-slide').height() != $('.swiper-slide').width()) {
+    $('.swiper-slide').height() == $('.swiper-slide').width();
+    $('.hover_wrap').height() == $('.hover_wrap').width();
+  }
+})
+
 $(function () {
   // 햄버거를 눌리면 사이드 메뉴가 활성화
   $('.hamburger').on('click', function () {
