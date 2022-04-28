@@ -569,7 +569,7 @@ input.search_line {
 
 .banner__main .banner__title {
     position: absolute;
-    top: 50%;
+    top: calc(50% - 10px);
     transform: translateY(-50%);
     font-size: 42px;
     color: #DC272D;
@@ -585,19 +585,15 @@ input.search_line {
 }
 
 .banner__title span {
+    font-weight: 500;
+    position: absolute;
+    top: 17%;
+    font-size: 32px;
     color: var(--color-white);
-    position: relative;
 }
 
-.banner__title span::before {
-    content: '';
-    height: 30px;
-    width: calc(100% + 20px);
-    background-color: var(--color-red);
-    position: absolute;
-    bottom: -10px;
-    left: -10px;
-    z-index: -1;
+.banner__title .deco1 {
+    position: relative;
 }
 
 /* 메인배너 */
@@ -1484,6 +1480,16 @@ select[name="filter"] {
         justify-content: flex-end;
     }
 
+    .banner__title span {
+        top: 15%;
+        font-size: 26px;
+    }
+
+
+    .banner__inner .swiper-wrapper .swiper-slide img {
+        height: 643px;
+    }
+
     .mini__banner__container {
         margin: 0 20px;
     }
@@ -1550,9 +1556,10 @@ select[name="filter"] {
             font-size: 32px !important;
         }
 
-        .banner__main .swiper-slide img {
-            height: 100vw;
+        .banner__inner .swiper-wrapper .swiper-slide img {
+            margin-left: -762px;
         }
+
 
         .banner__main .banner__title {
             transform: translateY(60%);
@@ -1765,7 +1772,14 @@ select[name="filter"] {
 
 
         /* 모바일 가로, 테블릿 세로 (해상도 480px ~ 767px)*/
-        @media all and (min-width:480px) (max-width:767px) {
+        @media all and (max-width:767px) {
+
+            /* 배너 */
+            .banner__title span {
+                top: 22%;
+                font-size: 24px !important;
+            }
+
 
             /* 타이틀 */
             .section__title {
@@ -1794,7 +1808,7 @@ select[name="filter"] {
 
             /* 헤더 */
             #header {
-                height: 60px;
+                height: 50px;
             }
 
             .nav__inner {
@@ -1819,7 +1833,7 @@ select[name="filter"] {
 
 
             /* 배너 */
-            banners #banners .banner__title {
+            #banners .banner__title {
                 left: 20px !important;
             }
 
@@ -2011,6 +2025,16 @@ select[name="filter"] {
 
         /* 모바일 가로, 테블릿 세로 (해상도 ~ 479px)*/
         @media all and (max-width:479px) {
+            .banner__title span {
+                font-size: 19px !important;
+                background-color: #DC272D;
+                top:6% !important;
+            }
+
+        
+            .swiper.banner__main .swiper-slide img {
+                height: 643px;
+            }
 
             .side_menu_bg {
                 top: 0;
@@ -2121,16 +2145,15 @@ select[name="filter"] {
                 cursor: pointer;
             }
 
+            .top__banner img {
+                display: none;
+            }
+
+            .nav__inner .logo img {
+                width: 68%;
+            }
 
             /* 배너 */
-            .swiper-slide {
-                width: 100vw;
-            }
-
-            .swiper.banner__main .swiper-slide img {
-                height: 100vw;
-            }
-
             .banner__inner .swiper-button-prev,
             .banner__inner .swiper-button-next {
                 display: none;
@@ -2196,17 +2219,18 @@ select[name="filter"] {
                 bottom: -10px;
             }
 
-            .slider3.swiper-pagination {}
-
-            .slider3.swiper-button-prev.b120 {
-                left: 20%;
-            }
-
+            .slider3.swiper-button-prev.b120,
             .slider3.swiper-button-next.b120 {
-                right: 20%;
+                display: none;
             }
+.capsule {font-size: 14px;}
+            .hover_info {padding-top: 162px; font-size: 14px;}
 
             /* 미니배너 */
+            .mini__btn__here {
+                display: none;
+            }
+
             .mini__banner__container {
                 bottom: 10px;
             }
