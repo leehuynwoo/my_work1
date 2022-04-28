@@ -73,9 +73,7 @@ button {
     position: relative;
 }
 
-.swiper3 .swiper-button-next{
-    
-}
+.swiper3 .swiper-button-next {}
 
 :root {
     --font-rockwell_ExBold: 'Rockwell Nova Extra Bold', sans-serif;
