@@ -106,11 +106,63 @@
     display: none;
 }
 
-ul.tab li.on{
+ul.tab li.on {
     background-color: var(--color-red);
     color: var(--color-white);
 }
 
 .tabcont.on {
     display: block;
+}
+
+
+@media all and (max-width:1240px) {
+    #event_section {
+        padding: 100px 40px 20px 40px;
+        margin: 0 auto;
+    }
+}
+
+@media all and (max-width:1024px) {}
+
+@media all and (max-width:767px) {
+    #event_section {
+        padding: 50px 20px 20px 20px;
+    }
+
+    .event_title {
+        font-size: 18px;
+    }
+
+    .event_info p {
+        font-size: 14px;
+    }
+
+    .tab,
+    .event_lists {
+        gap: 0.875rem;
+    }
+
+    .tab li {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        font-size: 16px;
+    }
+}
+
+@media all and (max-width:479px) {
+    .event_title {
+        font-size: 15px;
+    }
+
+    .event_info p, .event_data {font-size: 13px;}
+    .tab li {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        font-size: 14px;
+    }
+
+    .tab.mb40 {
+        margin-bottom: 20px;
+    }
 }
