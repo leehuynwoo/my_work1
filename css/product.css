@@ -72,12 +72,11 @@
     left: 240px !important;
 }
 
-.products__inner .container {}
+.best_products__container  .products {align-items: flex-start;}
 
 #best_products .products {
     max-width: 1023px;
     margin: 0;
-}
 }
 
 /* 테블릿 세로 (해상도 768px ~ 1023px)*/
