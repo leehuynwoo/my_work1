@@ -1,4 +1,3 @@
-
 :root {
     --font-rockwell_ExBold: 'Rockwell Nova Extra Bold', sans-serif;
     --color-red: #DC272D;
@@ -21,6 +20,7 @@
 
 
 .products__section__baner img {
+    width: 100%;
     border-radius: 50px;
     border: 1px solid var(--color-purepink);
     filter: drop-shadow(0px 4px 10px rgba(255, 214, 214, 0.25));
@@ -72,7 +72,9 @@
     left: 240px !important;
 }
 
-.best_products__container  .products {align-items: flex-start;}
+.best_products__container .products {
+    align-items: flex-start;
+}
 
 #best_products .products {
     max-width: 1023px;
@@ -81,23 +83,32 @@
 
 /* 테블릿 세로 (해상도 768px ~ 1023px)*/
 
-@media all and (min-width:1023px) and (max-width:1240px) {
-    .products {
-        grid-template-columns: repeat(3, 1fr) !important;
+
+@media all and (min-width:768px) and (max-width:1024px) {
+    .products__section__baner.cc.mb40 {
+        margin-left: 40px;
+        margin-right: 40px;
     }
-
-}
-
-@media all and (min-width:768px) and (max-width:1023px) {
-    ...
 }
 
 /* 모바일 가로, 테블릿 세로 (해상도 480px ~ 767px)*/
 @media all and (min-width:480px) and (max-width:767px) {
-    ...
+    .section__header {
+        width: 300px;
+    }
 }
 
 /* 모바일 가로, 테블릿 세로 (해상도 ~ 479px)*/
 @media all and (max-width:479px) {
-    ...
+    .section__header {
+        width: 240px;
+    }
+
+    .section__title.mb20 {
+        margin-bottom: 10px;
+    }
+
+    .section__header.mb60 {
+        margin-bottom: 30px;
+    }
 }

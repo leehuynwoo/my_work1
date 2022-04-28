@@ -1657,7 +1657,7 @@ select[name="filter"] {
         }
 
         /* 베스트 상품 */
-        #best_products .products {
+        .products {
             column-gap: 1rem;
             grid-template-columns: repeat(3, 1fr);
         }
@@ -2335,7 +2335,7 @@ select[name="filter"] {
             margin-bottom: 30px;
         }
 
-        #best_products .products {
+        .products {
             grid-template-columns: repeat(2, 44%);
             align-items: flex-start;
         }
