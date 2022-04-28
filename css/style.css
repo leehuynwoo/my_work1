@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@300;400;500;600;700&display=swap');
-@import url('https://fonts.cdnfonts.com/css/rockwell-nova');
+@import url('http://fonts.cdnfonts.com/css/rockwell-nova');
 
 * {
     margin: 0;
@@ -1173,13 +1173,38 @@ input.search_line {
 }
 
 /* ✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨
-✨✨✨✨✨✨상품디테일화면✨✨✨✨✨✨
+✨✨✨✨✨✨상품 디테일 화면✨✨✨✨✨✨
 ✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨ */
+
+#product_ifno {
+    margin-top: 30px;
+}
 
 .product_inner {
     display: grid;
     grid-template-columns: 570px 570px;
     gap: 30px;
+}
+
+.product_detail_slider .swiper-button-next,
+.product_detail_slider .swiper-button-prev {
+    filter: invert(55%) sepia(83%) saturate(3811%) hue-rotate(168deg) brightness(93%) contrast(101%);
+    width: 80px;
+    height: auto;
+}
+
+.product_detail_slider .swiper-button-next {
+    right: 20px;
+}
+
+.product_detail_slider .swiper-button-prev {
+    left: 20px;
+}
+
+.product_detail_slider .swiper-pagination {
+    margin-top: 25px;
+    position: initial;
+
 }
 
 .product_inner img {
@@ -1411,7 +1436,11 @@ select[name="filter"] {
 /* -모바일/반응형 🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡🧡*/
 @media all and (max-width:1400px) {
     #header {
-        height: 50px;
+        height: 88px;
+    }
+
+    .hamburger__box {
+        align-items: center;
     }
 
     .hamburger.b50 {
@@ -1422,6 +1451,7 @@ select[name="filter"] {
     .hamburger.b50 img {
         width: 24px;
     }
+
 
     /* 미니배너 */
     .mini_tit {
@@ -1455,6 +1485,19 @@ select[name="filter"] {
 
 
 @media all and (max-width:1240px) {
+    #header {
+        height: 55px;
+    }
+
+    .logo {
+        display: flex;
+    }
+
+    .logo img {
+        width: 50%;
+        height: auto;
+    }
+
     nav {
         padding-right: 40px;
         padding-left: 40px;
@@ -1510,11 +1553,6 @@ select[name="filter"] {
         .logo {
             display: flex;
             align-items: center;
-        }
-
-        .logo img {
-            width: 50%;
-            height: auto;
         }
 
         .side_menu_contents .need_log {
@@ -2025,13 +2063,15 @@ select[name="filter"] {
 
         /* 모바일 가로, 테블릿 세로 (해상도 ~ 479px)*/
         @media all and (max-width:479px) {
+            .hamburger.b50, .hamburger.b50 img{width: 18px; height: 18px;}
+
             .banner__title span {
                 font-size: 19px !important;
                 background-color: #DC272D;
-                top:6% !important;
+                top: 6% !important;
             }
 
-        
+
             .swiper.banner__main .swiper-slide img {
                 height: 643px;
             }
@@ -2223,8 +2263,15 @@ select[name="filter"] {
             .slider3.swiper-button-next.b120 {
                 display: none;
             }
-.capsule {font-size: 14px;}
-            .hover_info {padding-top: 162px; font-size: 14px;}
+
+            .capsule {
+                font-size: 14px;
+            }
+
+            .hover_info {
+                padding-top: 40%;
+                font-size: 14px;
+            }
 
             /* 미니배너 */
             .mini__btn__here {

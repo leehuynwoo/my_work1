@@ -62,6 +62,22 @@ $(function () {
       },
     });
   }
+
+  var swiper4 = new Swiper(".product_detail_slider", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true,
+    loopFillGroupWithBlank: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+
 });
 
 
@@ -143,25 +159,6 @@ addCartTextBtn.addEventListener('click', function (e) {
   e.preventDefault()
   alert('장바구니 담기 성공!');
 });
-
-// // 스크롤 이벤트
-// const scrollMenu = document.querySelector('.deep_info_wrap')
-// const scrollMenuFloatting = document.querySelector('.detail_floatingn_wrap')
-// scrollMenu.addEventListener('click', scrollEvent);
-// scrollMenuFloatting.addEventListener('click', scrollEvent);
-
-// function scrollEvent() {
-//   const target = event.target;
-//   const link = target.dataset.link;
-//   if (link == null) {
-//     return;
-//   };
-//   const scrollTo = document.querySelector(link);
-//   scrollTo.scrollIntoView({
-//     behavior: "smooth",
-//     block: "center"
-//   })
-// };
 
 // 할인율
 $(function () {

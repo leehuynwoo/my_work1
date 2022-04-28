@@ -13,7 +13,9 @@
      <link rel="stylesheet" href="css/style.css">
      <link rel="stylesheet" href="css/reset.css">
      <!-- sipwer -->
+     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
      <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
 
  </head>
@@ -22,62 +24,77 @@
 
  <body>
 
-    <div class="top__banner cc">
-        <p>회원가입 시 무료배송 + 3,OOO원 할인쿠폰!</p>
-        <img src="img/close.svg" alt="close">
-    </div>
-    <header id="header">
-        <nav class="nav">
-            <div class="nav__inner">
-                <ul class="gnb ss">
-                    <a href="index.html"><li class="active">Home</li></a>
-                    <a href="#"><li>Products</li></a>
-                    <a href="event.html"><li>Event</li></a>
-                </ul>
-                <div class="logo">
-                    <img src="img/symbol+text.png" alt="Logo">
-                </div>
-                <ul class="nav__util ec">
-                    <li class="icon user b50">
-                        <img src="img/user.png" alt="user">
-                    </li>
-                    <li class="icon cart b50">
-                        <img src="img/cart.svg" alt="cart">
-                    </li>
-                    <li class="icon search b50">
-                        <img src="img/search.png" alt="search">
-                    </li>
-                </ul>
-            </div>
-        </nav>
-        <!-- 서치섹션 -->
-        <div class="search_section">
-            <div class="search_section_inner cc">
-                <input type="text" placeholder="검색어를 입력하세요" class="search_line">
-                <div class="icon close_red b50">
-                    <img src="img/close_Red.svg" alt="close">
-                </div>
-            </div>
-        </div>
-    </header>
-    <!-- 헤더 -->
-     <div id="product_ifno">
+     <div class="top__banner cc">
+         <p>회원가입 시 무료배송 + 3,OOO원 할인쿠폰!</p>
+         <img src="img/close.svg" alt="close">
+     </div>
+     <header id="header">
+         <nav class="nav">
+             <div class="nav__inner">
+                 <ul class="gnb ss">
+                     <a href="index.html">
+                         <li class="active">Home</li>
+                     </a>
+                     <a href="#">
+                         <li>Products</li>
+                     </a>
+                     <a href="event.html">
+                         <li>Event</li>
+                     </a>
+                 </ul>
+                 <div class="logo">
+                     <img src="img/symbol+text.png" alt="Logo">
+                 </div>
+                 <ul class="nav__util ec">
+                     <li class="icon user b50">
+                         <img src="img/user.png" alt="user">
+                     </li>
+                     <li class="icon cart b50">
+                         <img src="img/cart.svg" alt="cart">
+                     </li>
+                     <li class="icon search b50">
+                         <img src="img/search.png" alt="search">
+                     </li>
+                 </ul>
+             </div>
+         </nav>
+         <!-- 서치섹션 -->
+         <div class="search_section">
+             <div class="search_section_inner cc">
+                 <input type="text" placeholder="검색어를 입력하세요" class="search_line">
+                 <div class="icon close_red b50">
+                     <img src="img/close_Red.svg" alt="close">
+                 </div>
+             </div>
+         </div>
+     </header>
+     <!-- 헤더 -->
+     <div id="product_ifno mt">
          <div class="product_inner cc">
              <div class="product">
-                 <img src="img/product1.png" alt="product" class="product_img">
+                 <div class="swiper product_detail_slider">
+                     <div class="swiper-wrapper">
+                         <div class="swiper-slide"><img src="img/example1.jpg" alt=""></div>
+                         <div class="swiper-slide"><img src="img/ourbest3.png" alt=""></div>
+                         <div class="swiper-slide"><img src="img/ourbest4.png" alt=""></div>
+                     </div>
+                     <div class="swiper-button-next"><img src="img/next.svg" alt=""></div>
+                     <div class="swiper-button-prev"><img src="img/prev.png" alt=""></div>
+                     <div class="swiper-pagination"></div>
+                 </div>
              </div>
              <div class="product_detail">
                  <div class="brand_name">
-                     브랜드명입니다.
+                     레드힐
                  </div>
                  <div class="hot_deal__proudct_intro">
-                     상품명입니다.
+                     자연함유 퍼펙트 세럼오일
                  </div>
-                 <p class="origin_price">800,000원</p>
+                 <p class="origin_price">32,000원</p>
                  <div class="price_box mb20">
                      <a href="#">
                          <p class="discount">20%</p>
-                         <p class="price">500,000원</p>
+                         <p class="price">25,600원</p>
                      </a>
                  </div>
                  <div class="count_controller sc">
@@ -93,7 +110,7 @@
                  </div>
                  <div class="total_price_box mb20 sc">
                      <p>총 합계 금액</p>
-                     <p class="total_price">500,000원</p>
+                     <p class="total_price">25,600원</p>
                  </div>
                  <div class="btn_box sc">
                      <div class="add_cart basic cc">장바구니 담기</div>
@@ -116,7 +133,8 @@
          <img src="img/banner1.png" alt="" class="detail_info_img">
      </div>
      <!-- 디테일 -->
-     <div id="detail_reviews" class="main detail_reviews " data-link="#detail_reviews" style="background-color: #FFEEF4;">
+     <div id="detail_reviews" class="main detail_reviews " data-link="#detail_reviews"
+         style="background-color: #FFEEF4;">
          <h3 class="section__title mb40">Reviews</h3>
          <div class="filter_wrap">
              <select name="filter">
@@ -213,9 +231,11 @@
              </div>
          </div>
          <div class="btn_wrap">
-             <a href="#"><div class="tbtn">
-                문의하기
-            </div></a>
+             <a href="#">
+                 <div class="tbtn">
+                     문의하기
+                 </div>
+             </a>
          </div>
      </div>
      <!-- 큐앤에이 -->
@@ -322,21 +342,19 @@
 
      <div class="detail_floating">
          <div class="detail_floatingn_wrap">
-            <div class="detail_floatingng_btn active" data-link="#detail_info">상품설명</div>
-            <div class="detail_floatingng_btn" data-link="#detail_reviews">리뷰</div>
-            <div class="detail_floatingng_btn" data-link="#detail_qan">Q&A</div>
-            <div class="detail_floatingng_btn" data-link="#detail_others">기타</div>
-         </div>  
-    </div>
-    <!-- 플로팅버튼 -->
+             <div class="detail_floatingng_btn active" data-link="#detail_info">상품설명</div>
+             <div class="detail_floatingng_btn" data-link="#detail_reviews">리뷰</div>
+             <div class="detail_floatingng_btn" data-link="#detail_qan">Q&A</div>
+             <div class="detail_floatingng_btn" data-link="#detail_others">기타</div>
+         </div>
+     </div>
+     <!-- 플로팅버튼 -->
      <div class="page_up_btn">
          <img src="img/page_up.svg" alt="page-up">
      </div>
      <!-- page-up button -->
-     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
      <script src="js/script.js" defer></script>
-     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-     <script src="js/text_rolling.js"></script>
+     <script src="js/scrollInto.js"></script>
  </body>
 
  </html>
