@@ -2134,6 +2134,7 @@ select[name="filter"] {
         }
 
         /* 상품 디테일 화면 product_detail */
+        #product_info {padding-top: 0;}
         #product_info .brand_name {
             font-size: 18px;
         }
@@ -2482,6 +2483,8 @@ select[name="filter"] {
         }
 
         /* 상품 디테일 화면 */
+
+        #product_info {padding-top: 0;}
         .product_inner {
             padding: 0 20px;
         }
@@ -2543,6 +2546,6 @@ select[name="filter"] {
             font-size: 13px;
         }
 
-
+.deep_info_wrap>div {padding: 13px 20px; justify-content: center;}
 
     }
