@@ -155,7 +155,6 @@ ul.tab li.on {
         font-size: 15px;
     }
 
-    .event_info p, .event_data {font-size: 13px;}
     .tab li {
         padding-top: 12px;
         padding-bottom: 12px;
@@ -164,5 +163,9 @@ ul.tab li.on {
 
     .tab.mb40 {
         margin-bottom: 20px;
+    }
+
+    .event_lists {
+            grid-template-columns: repeat(1, 1fr);
     }
 }
