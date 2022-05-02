@@ -38,7 +38,6 @@ p {
 /* a 링크 초기화 */
 a {
     text-decoration: none;
-    color: var(--color-black);
 }
 
 a:active {
