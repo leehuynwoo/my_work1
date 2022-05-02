@@ -365,10 +365,11 @@ nav {
     flex-basis: 25%;
 }
 
-.gnb a li {
+.gnb li {
     color: var(--color-red);
     position: relative;
     margin-right: 40px;
+    cursor: pointer;
 }
 
 
@@ -584,6 +585,8 @@ input.search_line {
     color: #DC272D;
     left: 20.1875rem;
 }
+
+.banner__title p {font-weight: 700;}
 
 .banner__main .swiper-button-prev {
     left: 100px;
