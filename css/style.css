@@ -1613,9 +1613,10 @@ select[name="filter"] {
     /* PC , 테블릿 가로 (해상도 768px ~ 1023px)*/
     @media all and (max-width:1024px) {
 
-        .detail_floating{
+        .detail_floating {
             display: none !important;
         }
+
         /* 사이드 메뉴 */
         .side_menu_contents {
             padding: 80px 40px;
@@ -1675,7 +1676,10 @@ select[name="filter"] {
         }
 
         /* 베스트 상품 */
-.best_products__container  {width: 95%; margin: 0 auto;}
+        .best_products__container {
+            width: 95%;
+            margin: 0 auto;
+        }
 
         .products {
             width: 90%;
@@ -1883,6 +1887,11 @@ select[name="filter"] {
         }
 
         /* ✨✨✨✨✨✨✨✨✨✨✨ 상품디테일화면 ✨✨✨✨✨✨✨✨✨✨✨*/
+
+        #product_info .origin_price {
+            font-size: 22px;
+        }
+
         .product_inner {
             grid-template-columns: 45vw 45vw;
         }
@@ -2149,9 +2158,11 @@ select[name="filter"] {
 
         /* 상품 디테일 화면 product_detail */
 
-        .product_detail_slider .swiper-button-next, .product_detail_slider .swiper-button-prev {
+        .product_detail_slider .swiper-button-next,
+        .product_detail_slider .swiper-button-prev {
             width: 50px;
         }
+
         #product_info {
             padding-top: 0;
         }
