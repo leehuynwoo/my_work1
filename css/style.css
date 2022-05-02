@@ -372,8 +372,11 @@ nav {
     cursor: pointer;
 }
 
+.gnb li a {
+    color: var(--color-red);
+}
 
-.gnb a li:hover::before {
+.gnb li a:hover::before {
     content: '';
     position: absolute;
     width: 100%;
