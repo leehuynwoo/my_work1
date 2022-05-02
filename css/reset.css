@@ -40,10 +40,6 @@ a {
     text-decoration: none;
 }
 
-a:active {
-  background-color: #DC272D;
-}
-
 /* 폰트 스타일 초기화 */
 em,
 address {
