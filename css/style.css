@@ -678,6 +678,10 @@ input.search_line {
     cursor: pointer;
 }
 
+.price_box a:visited{
+    color: unset;
+}
+
 .price_box .discount {
     margin-right: 12px;
 }
