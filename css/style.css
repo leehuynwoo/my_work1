@@ -888,6 +888,7 @@ input.search_line {
 .mini_banner__wrap {
     max-width: 1827px;
     margin: 0 auto;
+    padding: 0 20px;
 }
 
 .mini__banner__container {
