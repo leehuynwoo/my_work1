@@ -1,0 +1,387 @@
+ <!DOCTYPE html>
+ <html lang="en">
+
+ <head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Red-heal</title>
+
+     <!-- 파비콘 -->
+     <link rel="shortcut icon" type="image/jpg" href="img/favicon.png" />
+     <!-- Style -->
+     <link rel="stylesheet" href="css/style.css">
+     <link rel="stylesheet" href="css/reset.css">
+     <!-- sipwer -->
+     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+     <script src="js/counter.js" defer></script>
+     <script src="js/hover_menu.js" defer></script>
+
+
+ </head>
+
+ <!-- oncontextmenu='return false' onselectstart='return false' ondragstart='return false' -->
+
+ <body>
+
+     <div class="top__banner cc">
+         <p>회원가입 시 무료배송 + 3,OOO원 할인쿠폰!</p>
+         <img src="img/close.svg" alt="close">
+     </div>
+     <header id="header">
+         <nav class="nav__inner">
+             <ul class="gnb ss">
+                 <li class="active"><a href="index.html">Home</a></li>
+                 <li><a href="product.html">Products</a></li> <li><a href="event.html">Event</a> </li>
+             </ul>
+             <div class="logo">
+                 <img src="img/symbol+text.png" alt="Logo">
+             </div>
+             <ul class="nav__util ec">
+                 <li class="icon user b50">
+                     <img src="img/user.png" alt="user">
+                 </li>
+                 <li class="icon cart b50">
+                     <img src="img/cart.svg" alt="cart">
+                 </li>
+                 <li class="icon search b50">
+                     <img src="img/search.png" alt="search">
+                 </li>
+             </ul>
+             <div class="hamburger__box">
+                 <div class="hamburger b50">
+                     <img src="img/hamburger.svg" alt="hamburger menu">
+                 </div>
+             </div>
+         </nav>
+         <!-- 서치섹션 -->
+         <div class="search_section">
+             <div class="search_section_inner cc">
+                 <input type="text" placeholder="검색어를 입력하세요" class="search_line">
+                 <div class="icon close_red b50">
+                     <img src="img/close_Red.svg" alt="close">
+                 </div>
+             </div>
+         </div>
+     </header>
+     <!-- 헤더 -->
+     <div class="side_menu_contents">
+         <p class="need_log">로그인이 필요해요!</p>
+         <div class="side_search_box">
+             <input type="text" placeholder="검색어를 입력하세요">
+         </div>
+         <ul class="side_menu_lists">
+             <li class="side_menu_list"><a href="index.html">Home</a> </li>
+             <li class="side_menu_list"><a href="product.html">Products</a></li>
+             <li class="side_menu_list"><a href="event.html">Event</a></li>
+             <li class="side_menu_list"><a href="#">Cart</a></li>
+         </ul>
+         <ul class="side_menu_lists deco1">
+             <li class="side_menu_list"><a href="#">About</a> </li>
+             <li class="side_menu_list"><a href="#">Contact</a> </li>
+             <li class="side_menu_list"><a href="#">Terms </a> </li>
+             <li class="side_menu_list">Policy</li>
+             <li class="side_menu_list">Notices</li>
+         </ul>
+         <p class="non_momber_order_inquiry">비회원 주문조회</p>
+     </div>
+     <div class="side_menu_bg">
+     </div>
+     <!-- 모바일사이드메뉴 -->
+
+
+     <div id="product_info">
+         <div class="product_inner">
+             <div class="product">
+                 <div class="swiper product_detail_slider">
+                     <div class="swiper-wrapper">
+                         <div class="swiper-slide"><img src="img/example1.png" alt=""></div>
+                         <div class="swiper-slide"><img src="img/ourbest3.png" alt=""></div>
+                         <div class="swiper-slide"><img src="img/ourbest4.png" alt=""></div>
+                     </div>
+                     <div class="swiper-button-next"><img src="img/next.svg" alt=""></div>
+                     <div class="swiper-button-prev"><img src="img/prev.png" alt=""></div>
+                     <div class="swiper-pagination"></div>
+                 </div>
+             </div>
+             <div class="product_detail">
+                 <div class="product_detail_top">
+                     <div class="brand_name">
+                         레드힐
+                     </div>
+                     <div class="hot_deal__proudct_intro">
+                         자연함유 퍼펙트 세럼오일
+                     </div>
+                 </div>
+                 <div class="product_detail_bottom">
+                     <p class="origin_price">32,000원</p>
+                     <div class="price_box mb20">
+                         <a href="#">
+                             <p class="discount">20%</p>
+                             <p id="price" class="price" name="amout" value="25600">25,600</p>
+                             <p>원</p>
+                         </a>
+                     </div>
+                     <div class="count_controller sc">
+                         <p>구매수량</p>
+                         <div class="controller_wrap sc">
+                             <button class="decrement b32" type="button"><img src="img/minor.svg" alt="-"
+                                     style="width: 20px;"></button>
+                             <div class="count">1</div>
+                             <button class="increment b32" type="button"><img src="img/plus.svg" alt="+"
+                                     style="width: 20px;"></button>
+                         </div>
+                     </div>
+                     <div class="total_price_box mb20 sc">
+                         <p>총 합계 금액</p>
+                         <p class="total_price">25,600원</p>
+                     </div>
+                     <div class="btn_box sc">
+                         <div class="add_cart basic cc">장바구니 담기</div>
+                         <div class="get btn_red cc">바로구매</div>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </div>
+     <!-- 아이템 -->
+     <div class="deep_info" id="detail_info_btn">
+         <div class="deep_info_wrap">
+             <div class="active" data-link="#detail_info">상품설명</div>
+             <div data-link="#detail_reviews">리뷰</div>
+             <div data-link="#detail_qan">Q&A</div>
+             <div data-link="#detail_others">배송|교환|환불</div>
+         </div>
+     </div>
+     <div id="detail_info" class="main detail_info" data-link="#detail_info" style="background-color: #EEF8FF;">
+         <h3 class="section__title mb40">Detail</h3>
+         <img src="img/banner1.png" alt="" class="detail_info_img">
+     </div>
+     <!-- 디테일 -->
+     <div id="detail_reviews" class="main detail_reviews " data-link="#detail_reviews"
+         style="background-color: #FFEEF4;">
+         <h3 class="section__title mb40">Reviews</h3>
+         <div class="filter_wrap">
+             <select name="filter">
+                 <option value="최신순">최신순</option>
+             </select>
+         </div>
+         <div class="table_wrap cc mb60">
+             <div class="table_inner">
+                 <div class="table_content">
+                     <div class="table_leff">
+                         <div class="user_id">
+                             레드힐신봉자
+                         </div>
+                     </div>
+                     <ul class="table_specific">
+                         <li class="dateStar ss mb08">
+                             <div class="table_date">
+                                 2022.04.15
+                             </div>
+                             <div class="stars">
+                                 💙💙💙💙
+                             </div>
+                         </li>
+                         <li class="writing">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam porro
+                             consequuntur tenetur quo, iure exercitationem nostrum perspiciatis praesentium, fugit
+                             aliquid harum voluptas quod numquam vero, odio animi rem quos ratione! Blanditiis quasi
+                             eveniet culpa magnam omnis molestias necessitatibus vero commodi obcaecati unde!</li>
+                     </ul>
+                 </div>
+             </div>
+         </div>
+         <div class="btn_wrap">
+             <a href="#">
+                 <div class="tbtn">
+                     리뷰쓰기
+                 </div>
+             </a>
+         </div>
+     </div>
+     <!-- 리뷰 -->
+     <div id="detail_qan" class="main detail_qan" data-link="#detail_qan" style="background-color: #FFFCE9;">
+         <h3 class="section__title mb40">Q&A</h3>
+         <div class="filter_wrap">
+             <select name="filter">
+                 <option value="최신순">등록순</option>
+                 <option value="답변완료">답변완료</option>
+                 <option value="답변대기">답변대기</option>
+             </select>
+         </div>
+         <div class="table_wrap cc mb60">
+             <div class="table_inner">
+                 <div class="table_content">
+                     <div class="table_leff">
+                         <div class="answer done mb08">
+                             답변완료
+                         </div>
+                         <div class="user_id">
+                             레드힐신봉자
+                         </div>
+                     </div>
+                     <ul class="table_specific ">
+                         <li class="dateStar mb08">
+                             <div class="table_date">
+                                 2022.04.15
+                             </div>
+                         </li>
+                         <li class="writing">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam porro
+                             consequuntur tenetur quo, iure exercitationem nostrum perspiciatis praesentium, fugit
+                             aliquid harum voluptas quod numquam vero, odio animi rem quos ratione! Blanditiis quasi
+                             eveniet culpa magnam omnis molestias necessitatibus vero commodi obcaecati unde!</li>
+                     </ul>
+                 </div>
+                 <div class="table_content">
+                     <div class="table_leff">
+                         <div class="answer wait mb08">
+                             답변대기
+                         </div>
+                         <div class="user_id">
+                             레드힐신봉자
+                         </div>
+                     </div>
+                     <ul class="table_specific">
+                         <li class="dateStar mb08">
+                             <div class="table_date">
+                                 2022.04.15
+                             </div>
+                         </li>
+                         <li class="writing">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam porro
+                             consequuntur tenetur quo, iure exercitationem nostrum perspiciatis praesentium, fugit
+                             aliquid harum voluptas quod numquam vero, odio animi rem quos ratione! Blanditiis quasi
+                             eveniet culpa magnam omnis molestias necessitatibus vero commodi obcaecati unde!</li>
+                     </ul>
+                 </div>
+             </div>
+         </div>
+         <div class="btn_wrap">
+             <a href="#">
+                 <div class="tbtn">
+                     문의하기
+                 </div>
+             </a>
+         </div>
+     </div>
+     <!-- 큐앤에이 -->
+     <div id="detail_others" class="main detail_others" data-link="#detail_others" style="background-color: #FFF;">
+         <h3 class="section__title mb40">others</h3>
+         <div class="others__wrap cc">
+             <div class="others__inner">
+                 <div class="others__inner_box mb20">
+                     <div class="others_title">
+                         배송안내
+                     </div>
+                     <div class="others_detail">
+                         <div>
+                             <p>
+                                 배송지역 : 전국<br />
+                                 배송비 : 2,500원<br />
+                                 총 결제금액 20,000원 이상일 경우 무료배송 됩니다.<br />
+                                 배송기간은 주문일(무통장입금은 결제완료일)로부터 1일(24시간) ~ 5일정도 걸립니다.<br />
+                                 도서, 산간, 오지 일부 지역은 배송비가 추가될 수 있습니다.<br />
+                             </p>
+                         </div>
+                     </div>
+                 </div>
+                 <div class="others__inner">
+                     <div class="others__inner_box">
+                         <div class="others_title">
+                             교환|반품
+                         </div>
+                         <div class="others_detail">
+                             <div>
+                                 <p class="mb08">
+                                     교환/반품 신청은 배송완료 후 7일 이내 가능합니다.<br />
+                                     변심 반품의 경우 왕복배송비를 차감한 금액이 환불되며, 제품 및 포장 상태가 재판매 가능하여야 합니다.<br />
+                                     상품 불량인 경우는 배송비를 포함한 전액이 환불됩니다.<br />
+                                     출고 이후 환불요청 시 상품 회수 후 처리됩니다.<br />
+                                 </p>
+                                 <p>
+                                     <span style="font-weight: 500;">신청방법</span>: 마이페이지 내 주문내역에서 신청가능 합니다.<br />
+                                     <span style="font-weight: 500;">신청비용</span> : 당사의 사유(상품의 하자, 배송의 오류 등)로 인한 경우 교환 및
+                                     반품에 필요한 비용은 당사에서 부담합니다.<br />
+                                     고객님의 사유에 의한 교환 및 반품은 회수 및 배송에 필요한 비용을 부담해주셔야 합니다.<br />
+                                     기본 비용은 교환 5,000원(회수비+배송비), 반품 2,500원(회수비)입니다.<br />
+                                     제주도 및 도서산간 지방에는 추가 운임이 발생합니다.<br />
+                                 </p>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </div>
+     <!-- 기타 정보 -->
+
+     <footer id="footer">
+         <div class="footer__container">
+             <div class="footer__top sc">
+                 <div class="logo" style="text-align: left; max-width: 292px; flex: 1;">
+                     <a href="#"><img src="img/textlogo.svg" alt="logo"></a>
+                 </div>
+                 <ul class="footer__menus cc" style="flex: 2;">
+                     <li class="footer__menu"><a href="#">About</a>
+                     </li>
+                     <li class="footer__menu"><a href="#">Contact</a>
+                     </li>
+                     <li class="footer__menu"><a href="#">Terms</a>
+                     </li>
+                     <li class="footer__menu"><a href="#">Policy</a>
+                     </li>
+                     <li class="footer__menu"><a href="#">Notices</a>
+                     </li>
+                 </ul>
+                 <div class="cscenter" style="flex: 0.5;">
+                     CS Center
+                 </div>
+             </div>
+             <div class="footer__info sc">
+                 <div class="footer__business">
+                     <div class="footer__business__info mb40">
+                         <p>Portfolio | Lee Hyun Woo</p>
+                         <p>주소 | 01234 레드힐시 힐구 56길 89 </p>
+                         <p>사업자등록번호 | 123-45-67890 </p>
+                         <p>통신판매업자신고 | 제1234-서울레드-5678호</p>
+                         <p>개인정보보호책임자 | 이현우</p>
+                     </div>
+                     <div class="coryrights">
+                         COPYRIGHTS LeeHyunWoo. ALL RIGHTS RESERVED.
+                     </div>
+                 </div>
+                 <div class="cs__info">
+                     <div class="cs_number">
+                         1234-5678
+                         <div class="operating_time">
+                             <p>MON-FRI 10:00 - 17:00<br>( lunch 12:00 - 13:30 )</p>
+                         </div>
+                     </div>
+                     <a href="#">
+                         <div class="basic cc">1:1 문의</div>
+                     </a>
+                 </div>
+             </div>
+         </div>
+     </footer>
+     <!-- 푸터 -->
+
+     <div class="detail_floating">
+         <div class="detail_floatingn_wrap">
+             <div class="detail_floatingng_btn active" data-link="#detail_info">상품설명</div>
+             <div class="detail_floatingng_btn" data-link="#detail_reviews">리뷰</div>
+             <div class="detail_floatingng_btn" data-link="#detail_qan">Q&A</div>
+             <div class="detail_floatingng_btn" data-link="#detail_others">기타</div>
+         </div>
+     </div>
+     <!-- 플로팅버튼 -->
+     <div class="page_up_btn">
+         <img src="img/page_up.svg" alt="page-up">
+     </div>
+     <!-- page-up button -->
+     <script src="js/script.js" defer></script>
+     <script src="js/scrollInto.js"></script>
+ </body>
+
+ </html>
